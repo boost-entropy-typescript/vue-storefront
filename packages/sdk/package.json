@@ -1,7 +1,7 @@
 {
   "name": "@vue-storefront/sdk",
   "license": "MIT",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "main": "lib/index.cjs.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
@@ -13,8 +13,8 @@
     "dev": "rimraf lib && rollup -c -w",
     "lint": "eslint . --ext .ts",
     "test": "yarn test:unit && yarn test:integration",
-    "test:unit": "jest ./src/__tests__/unit -c ./jest.config.unit.cjs --coverage",
-    "test:integration": "jest ./src/__tests__/integration -c ./jest.config.integration.cjs --runInBand --coverage",
+    "test:unit": "jest ./src/__tests__/unit -c ./jest.config.unit.ts --coverage",
+    "test:integration": "jest ./src/__tests__/integration -c ./jest.config.integration.ts --runInBand --coverage",
     "prepublishOnly": "yarn build",
     "changesets:version": "yarn changeset version && YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install",
     "changesets:publish": "yarn run build && yarn changeset publish"
