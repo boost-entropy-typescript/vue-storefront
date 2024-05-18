@@ -13,14 +13,6 @@ on:
         required: false
         default: false
 
-      node_version:
-        description: "Node versions to test"
-        type: string
-        required: false
-        default: "['16', '18']"
-
-env:
-  HUSKY: 0
 
 jobs:
   scanning:
@@ -46,9 +38,6 @@ jobs:
   run-ci:
     name: Run CI
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node_version: ${{ fromJson(inputs.node_version) }}
     permissions:
       contents: read
       id-token: write
@@ -64,28 +53,19 @@ jobs:
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
           to_envs() { jq -r "to_entries[] | \"\(.key)<<$EOF\n\(.value)\n$EOF\n\""; }
           echo "$SECRETS_CONTEXT" | to_envs >> $GITHUB_ENV
-      - name: Checkout code 🛎️
-        uses: actions/checkout@v4
+          
+      - uses: actions/checkout@v4
 
-      - name: Setup node 🏗️
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version-file: '.node-version'
           registry-url: ${{ inputs.enterprise && 'https://registrynpm.storefrontcloud.io' || '' }}
+          cache: yarn
 
-      - name: Get cache 🗄️
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}-${{ matrix.node_version }}
-
-      - name: Install dependencies (OS)
-        if: ${{ !steps.cache.outputs.cache-hit }}
-        shell: bash
-        run: yarn --frozen-lockfile
+      - run: yarn install --frozen-lockfile
         env:
           NODE_AUTH_TOKEN: ${{ secrets.VERDACCIO_AUTH_TOKEN }}
+          HUSKY: 0
 
       - name: Detect circular dependencies 🔄
         uses: vuestorefront/vue-storefront/actions/circular-dependencies@main
@@ -97,11 +77,11 @@ jobs:
         with:
           projectPath: ${{ github.workspace }}
 
-      - name: Build project
-        run: yarn build
+      - run: yarn build
 
-      - name: Run tests
-        run: yarn test
+      - run: yarn lint
+
+      - run: yarn test
 
       - name: Upload test coverage
         uses: actions/upload-artifact@v4
