@@ -1,0 +1,254 @@
+yarn run v1.22.22
+$ tsup && yarn build:app-router && yarn build:pages-router
+CLI Building entry: {"index":"src/index.ts","client":"src/client.ts"}
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.0.1
+CLI Using tsup config: /home/runner/work/vue-storefront/vue-storefront/packages/next/tsup.config.ts
+CLI Target: es2015
+CJS Build start
+ESM Build start
+ESM dist/index.mjs          3.21 KB
+ESM dist/client.mjs         979.00 B
+ESM dist/chunk-EX6ADWAR.mjs 900.00 B
+ESM ⚡️ Build success in 33ms
+CJS dist/index.js  4.94 KB
+CJS dist/client.js 2.60 KB
+CJS ⚡️ Build success in 34ms
+DTS Build start
+DTS ⚡️ Build success in 4007ms
+DTS dist/index.d.ts           3.38 KB
+DTS dist/client.d.ts          1.01 KB
+DTS dist/types-BcfPWFmc.d.ts  3.64 KB
+DTS dist/index.d.mts          3.38 KB
+DTS dist/client.d.mts         1.02 KB
+DTS dist/types-BcfPWFmc.d.mts 3.64 KB
+$ cd __tests__/apps/app-router && yarn install && yarn build
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+$ next build
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+   ▲ Next.js 14.0.4
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ⚠ Compiled with warnings
+
+./node_modules/scheduler/cjs/scheduler.production.min.js
+A Node.js API is used (setImmediate at line: 51) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/scheduler/cjs/scheduler.production.min.js
+./node_modules/scheduler/index.js
+./node_modules/react-dom/cjs/react-dom.production.min.js
+./node_modules/react-dom/index.js
+./node_modules/next/dist/esm/client/script.js
+./node_modules/next/script.js
+./node_modules/next-runtime-env/build/script/env-script.js
+./node_modules/next-runtime-env/build/script/index.js
+./node_modules/next-runtime-env/build/index.js
+./sdk/options.ts
+./sdk/sdk.server.ts
+
+./node_modules/scheduler/cjs/scheduler.production.min.js
+A Node.js API is used (setImmediate at line: 51) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/scheduler/cjs/scheduler.production.min.js
+./node_modules/scheduler/index.js
+./node_modules/react-dom/cjs/react-dom.production.min.js
+./node_modules/react-dom/index.js
+./node_modules/next/dist/esm/client/script.js
+./node_modules/next/script.js
+./node_modules/next-runtime-env/build/script/env-script.js
+./node_modules/next-runtime-env/build/script/index.js
+./node_modules/next-runtime-env/build/index.js
+./sdk/options.ts
+./sdk/sdk.server.ts
+
+./node_modules/scheduler/cjs/scheduler.production.min.js
+A Node.js API is used (MessageChannel at line: 120) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/scheduler/cjs/scheduler.production.min.js
+./node_modules/scheduler/index.js
+./node_modules/react-dom/cjs/react-dom.production.min.js
+./node_modules/react-dom/index.js
+./node_modules/next/dist/esm/client/script.js
+./node_modules/next/script.js
+./node_modules/next-runtime-env/build/script/env-script.js
+./node_modules/next-runtime-env/build/script/index.js
+./node_modules/next-runtime-env/build/index.js
+./sdk/options.ts
+./sdk/sdk.server.ts
+
+./node_modules/scheduler/cjs/scheduler.production.min.js
+A Node.js API is used (MessageChannel at line: 121) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/scheduler/cjs/scheduler.production.min.js
+./node_modules/scheduler/index.js
+./node_modules/react-dom/cjs/react-dom.production.min.js
+./node_modules/react-dom/index.js
+./node_modules/next/dist/esm/client/script.js
+./node_modules/next/script.js
+./node_modules/next-runtime-env/build/script/env-script.js
+./node_modules/next-runtime-env/build/script/index.js
+./node_modules/next-runtime-env/build/index.js
+./sdk/options.ts
+./sdk/sdk.server.ts
+
+   Linting and checking validity of types ...
+
+ ⚠ The Next.js plugin was not detected in your ESLint configuration. See https://nextjs.org/docs/basic-features/eslint#migrating-existing-config
+   Collecting page data ...
+   Generating static pages (0/6) ...
+   Generating static pages (1/6) 
+   Generating static pages (2/6) 
+   Generating static pages (4/6) 
+ ✓ Generating static pages (6/6) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ λ /                                    138 B            82 kB
+├ λ /_not-found                          869 B          82.7 kB
+├ λ /csr                                 969 B          85.6 kB
+└ λ /ssr                                 429 B          85.1 kB
++ First Load JS shared by all            81.8 kB
+  ├ chunks/938-f464a3b2301c5ba9.js       26.7 kB
+  ├ chunks/fd9d1056-516b58327fb05db5.js  53.3 kB
+  ├ chunks/main-app-d730effb3fc44d76.js  220 B
+  └ chunks/webpack-a8ba63f2417b26c7.js   1.66 kB
+
+
+ƒ Middleware                             125 kB
+
+λ  (Dynamic)  server-rendered on demand using Node.js
+
+$ cd __tests__/apps/pages-router && yarn install && yarn build
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+$ next build
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+   Linting and checking validity of types ...
+
+ ⚠ The Next.js plugin was not detected in your ESLint configuration. See https://nextjs.org/docs/basic-features/eslint#migrating-existing-config
+   ▲ Next.js 14.0.4
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ⚠ Compiled with warnings
+
+./node_modules/scheduler/cjs/scheduler.production.min.js
+A Node.js API is used (setImmediate at line: 51) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/scheduler/cjs/scheduler.production.min.js
+./node_modules/scheduler/index.js
+./node_modules/react-dom/cjs/react-dom.production.min.js
+./node_modules/react-dom/index.js
+./node_modules/next/dist/esm/client/script.js
+./node_modules/next/script.js
+./node_modules/next-runtime-env/build/script/env-script.js
+./node_modules/next-runtime-env/build/script/index.js
+./node_modules/next-runtime-env/build/index.js
+./sdk/options.ts
+./sdk/sdk.server.ts
+
+./node_modules/scheduler/cjs/scheduler.production.min.js
+A Node.js API is used (setImmediate at line: 51) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/scheduler/cjs/scheduler.production.min.js
+./node_modules/scheduler/index.js
+./node_modules/react-dom/cjs/react-dom.production.min.js
+./node_modules/react-dom/index.js
+./node_modules/next/dist/esm/client/script.js
+./node_modules/next/script.js
+./node_modules/next-runtime-env/build/script/env-script.js
+./node_modules/next-runtime-env/build/script/index.js
+./node_modules/next-runtime-env/build/index.js
+./sdk/options.ts
+./sdk/sdk.server.ts
+
+./node_modules/scheduler/cjs/scheduler.production.min.js
+A Node.js API is used (MessageChannel at line: 120) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/scheduler/cjs/scheduler.production.min.js
+./node_modules/scheduler/index.js
+./node_modules/react-dom/cjs/react-dom.production.min.js
+./node_modules/react-dom/index.js
+./node_modules/next/dist/esm/client/script.js
+./node_modules/next/script.js
+./node_modules/next-runtime-env/build/script/env-script.js
+./node_modules/next-runtime-env/build/script/index.js
+./node_modules/next-runtime-env/build/index.js
+./sdk/options.ts
+./sdk/sdk.server.ts
+
+./node_modules/scheduler/cjs/scheduler.production.min.js
+A Node.js API is used (MessageChannel at line: 121) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/scheduler/cjs/scheduler.production.min.js
+./node_modules/scheduler/index.js
+./node_modules/react-dom/cjs/react-dom.production.min.js
+./node_modules/react-dom/index.js
+./node_modules/next/dist/esm/client/script.js
+./node_modules/next/script.js
+./node_modules/next-runtime-env/build/script/env-script.js
+./node_modules/next-runtime-env/build/script/index.js
+./node_modules/next-runtime-env/build/index.js
+./sdk/options.ts
+./sdk/sdk.server.ts
+
+   Collecting page data ...
+   Generating static pages (0/4) ...
+   Generating static pages (1/4) 
+   Generating static pages (2/4) 
+   Generating static pages (3/4) 
+ ✓ Generating static pages (4/4) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (pages)                              Size     First Load JS
+┌ ○ /                                      269 B           106 kB
+├   /_app                                  0 B             106 kB
+├ ○ /404                                   181 B           106 kB
+├ ○ /csr                                   387 B           106 kB
+└ λ /ssr                                   331 B           106 kB
++ First Load JS shared by all              106 kB
+  ├ chunks/framework-03cd576e71e4cd66.js   45.2 kB
+  ├ chunks/main-d35ddd9e67ecb0dc.js        31.7 kB
+  ├ chunks/pages/_app-cca01012445cff9c.js  28 kB
+  └ chunks/webpack-59c5c889f52620d6.js     823 B
+
+ƒ Middleware                               125 kB
+
+○  (Static)   prerendered as static content
+λ  (Dynamic)  server-rendered on demand using Node.js
+
+Done in 52.04s.
